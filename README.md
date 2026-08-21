@@ -22,16 +22,18 @@
 
 | # | 章節 | 負責 | 狀態 |
 |---|---|---|---|
-| 0 | 適用範圍、使用方式、證據分級 | Layer-PM | 未開始 |
-| 1 | 使用場景定義 | Layer-PM | 未開始 |
+| 0 | [適用範圍、使用方式、證據分級](00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
+| 1 | [使用場景定義](01-use-scenario.md) | Layer-PM | ✅ 初稿 |
 | 2 | 人因與解剖基準（男/女、S/M/L） | Layer-PM | 未開始，**阻塞於亞洲耳部尺寸數據** |
 | 3 | [耳部敏感區與禁置區](03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
 | 4 | [最大可設計區域](04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
 | 5 | [聲學幾何約束](05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
 | 6 | [結構與材料（含 3D 列印性）](06-structure-materials.md) | Pareo-MechEE | ✅ 已驗收 |
-| 7 | 佩戴壓力與舒適 | Layer-PM | 未開始 |
-| 8 | CMF（含暗室指示燈亮度上限） | Layer-PM | 未開始 |
-| 9 | 檢查清單 | Layer-PM | 未開始 |
+| 7 | [佩戴壓力與舒適](07-wearing-pressure-comfort.md) | Layer-PM | ✅ 初稿 |
+| 8 | [CMF（含暗室指示燈亮度上限）](08-cmf.md) | Layer-PM | ✅ 初稿 |
+| 9 | [檢查清單](09-checklist.md) | Layer-PM | ✅ 初稿 |
+
+**除 Part 2 外全部章節已有初稿。** Part 2 阻塞於亞洲成人耳部尺寸數據，見下方缺口。
 
 ## 三條貫穿全文的硬性規範
 
