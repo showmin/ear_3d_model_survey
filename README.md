@@ -27,8 +27,8 @@
 | 2 | 人因與解剖基準（男/女、S/M/L） | Layer-PM | 未開始，**阻塞於亞洲耳部尺寸數據** |
 | 3 | [耳部敏感區與禁置區](03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
 | 4 | [最大可設計區域](04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
-| 5 | 聲學幾何約束 | Chuchu-Acoustic | 初稿已交，PM 審閱中 |
-| 6 | 結構與材料（含 3D 列印性） | Pareo-MechEE | 初稿已交，PM 審閱中 |
+| 5 | [聲學幾何約束](05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
+| 6 | [結構與材料（含 3D 列印性）](06-structure-materials.md) | Pareo-MechEE | ✅ 已驗收 |
 | 7 | 佩戴壓力與舒適 | Layer-PM | 未開始 |
 | 8 | CMF（含暗室指示燈亮度上限） | Layer-PM | 未開始 |
 | 9 | 檢查清單 | Layer-PM | 未開始 |
