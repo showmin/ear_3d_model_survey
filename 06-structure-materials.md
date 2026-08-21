@@ -4,6 +4,8 @@
 
 **範圍**：可製造性限定於「3D 印表機印得出來」，不含量產模具工藝（@showmin-wang 2026-08-21 指示）。
 
+> **用語規範**：耳部與醫學名詞一律中文在前、英文於括號內，例如 耳屏（tragus）。
+
 ---
 
 ## A. 列印性（依製程分列）
@@ -39,8 +41,8 @@
 |---|---|---|---|---|
 | **主方案：複合結構（列印硬殼＋外購軟塞）** | 接觸面硬度可達 Shore A 10–20 | 【單一來源脈絡，待交叉驗證】 | 市場資訊：audioreviews.org 分類語句；soundcore 產品頁、Alibaba 採購指南使用相同分類，**均無獨立原廠規格佐證** | **推薦方案。** 不違反「印得出來」前提——僅硬殼需列印，軟塞外購，整體不需開模 |
 | **備案：純列印** | 接觸面硬度下限約 Shore A 43–50 | 【文獻】 | 市場商品統計：Liqcreate、Forerunner3D 樹脂供應商規格 | **代價**：43–50A 遠高於睡眠耳塞常見的 10–20A，長時間側睡壓迫感明顯增加。此方案犧牲舒適度換取「全部自印」，由設計者自行決定 |
-| 一般矽膠耳塞硬度範圍（背景參考） | Shore A 10–90，常見耳道密封舒適區間 40–60A | 【文獻】 | 市場商品統計：audioreviews.org IEM 矽膠耳塞指南、矽膠製造商規格指南 | — |
-| 記憶棉／軟凝膠耳塞 | 應以 **Shore 00** 標度量測，非 Shore A | 【假設待驗】 | — | Shore 00 用於凝膠／泡棉為業界通則，但未查到記憶棉耳塞具體 Shore 00 數值（Comply 等廠商未公開）。**數值留空** |
+| 一般矽膠耳塞（silicone eartip）硬度範圍（背景參考） | Shore A 10–90，常見耳道密封舒適區間 40–60A | 【文獻】 | 市場商品統計：audioreviews.org IEM 矽膠耳塞指南、矽膠製造商規格指南 | — |
+| 記憶棉（memory foam）／軟凝膠（soft gel）耳塞 | 應以 **Shore 00** 標度量測，非 Shore A | 【假設待驗】 | — | Shore 00 用於凝膠／泡棉為業界通則，但未查到記憶棉耳塞具體 Shore 00 數值（Comply 等廠商未公開）。**數值留空** |
 | Shore A／00／D 測量標準 | ASTM D2240（現行版 D2240-15(2021)） | 【文獻】 | 業界標準：ASTM International。已查得 store.astm.org 官方條目，並經 ZwickRoell／Intertek／Smithers 等獨立檢測機構描述互相印證 | 涵蓋 A/B/C/D/DO/E/M/O/OO/OOO/OOO-S/R 共十二種標度 |
 
 > ⚠️ **Shore A 與 Shore 00 是不同標度，數值不可互相比較。** 記憶棉、軟凝膠常用 Shore 00；一般矽膠用 Shore A。這是本主題最常見的錯誤。
@@ -52,8 +54,8 @@
 | 條目 | 內容 | 來源等級 | 來源出處 | 備註 |
 |---|---|---|---|---|
 | 定性關係 | 硬度越低，相同幾何過盈量下界面接觸壓力越低（彈性模量與壓力正相關） | 【假設待驗】 | — | 未查到耳機／耳塞領域量化的硬度—壓力對應數據，**不編公式** |
-| **耳屏為壓力最敏感區** | 耳甲六個量測點中耳屏 PDT 最低；性別、左右對稱性、BMI 對閾值無顯著影響（80 名受試者） | 【文獻】 | 學術論文：Yuan, X. et al., *Measurement of pressure discomfort threshold in auricular concha for in-ear wearables design*, Applied Ergonomics, 2023, 113: 104078. DOI: [10.1016/j.apergo.2023.104078](https://doi.org/10.1016/j.apergo.2023.104078) | 摘要已核；全文付費牆，**絕對數值未取得** |
-| 架構接口 | PDT 給可承受壓力上限 → 硬度＋幾何過盈量算出實際接觸壓力 → 兩者比對。**壓在耳屏的結構，壓力門檻取全機最低** | 【推論】 | 本團隊架構推論，非文獻直述 | 接口先留好，待 PDT 絕對數值或實測壓力數據補上再計算 |
+| **耳屏（tragus）為壓力最敏感區** | 耳甲（concha）六個量測點中耳屏壓力不適閾值（pressure discomfort threshold, PDT）最低；性別、左右對稱性、身體質量指數（BMI）對閾值無顯著影響（80 名受試者） | 【文獻】 | 學術論文：Yuan, X. et al., *Measurement of pressure discomfort threshold in auricular concha for in-ear wearables design*, Applied Ergonomics, 2023, 113: 104078. DOI: [10.1016/j.apergo.2023.104078](https://doi.org/10.1016/j.apergo.2023.104078) | 摘要已核；全文付費牆，**絕對數值未取得** |
+| 架構接口 | PDT 給可承受壓力上限 → 硬度＋幾何過盈量算出實際接觸壓力 → 兩者比對。**壓在耳屏（tragus）的結構，壓力門檻取全機最低** | 【推論】 | 本團隊架構推論，非文獻直述 | 接口先留好，待 PDT 絕對數值或實測壓力數據補上再計算 |
 
 交叉參照：[Part 3 耳部敏感區與禁置區](03-sensitive-zones.md)
 
