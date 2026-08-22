@@ -25,6 +25,7 @@
 |---|---|---|---|
 | 0 | [適用範圍、使用方式、證據分級](00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
 | 1 | [使用場景定義](01-use-scenario.md) | Layer-PM | ✅ 初稿 |
+| 1A | [**睡姿分別分析：正睡／側睡／坐睡**](01a-posture-analysis.md) | Layer-PM | ✅ 初稿 |
 | 2 | [人因與解剖基準](02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=112)；需 P1–P5 的尺寸改用【文獻】 |
 | 3 | [耳部敏感區與禁置區](03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
 | 4 | [最大可設計區域](04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
