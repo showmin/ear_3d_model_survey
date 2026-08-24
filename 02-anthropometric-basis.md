@@ -375,10 +375,10 @@ PCA 第一主軸依定義即為延伸範圍最大之方向，故沿 PC1 的跨�
 　全文：<https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0717-95022017000401451>
 　類型：學術論文（開放存取）。**全文已實際開啟，數值表逐格轉錄。** 註：`www.scielo.cl` 之 PDF 與全文頁受 Cloudflare 阻擋，改用 `scielo.conicyt.cl` 舊網域可取得。
 
+④ Wang, M., Fan, H., Yu, S., Wang, L., Chu, J., Tang, X., Li, W., Zhao, X., Zhang, S., Chen, D. **Analysis of the auricles and auricular shape types for ear-related wearables: A study of mainland Chinese sample aged 15–79.** *Work*, 2022, 73(1): 335–352. DOI: [10.3233/WOR-210799](https://doi.org/10.3233/WOR-210799)
+　類型：學術論文。1,120 名中國大陸受試者，15–79 歲，鑄模（casting）＋3D 掃描，18 項耳廓量測變數，歸納五種耳廓形態類型。
+　**摘要已透過 Europe PMC API 核實；數值表在付費牆後未取得。** 目前僅引用其質性結論（量測值隨年齡連續變化、多數線性變數穩定增加、形態類型與年齡組別強相關），**未引用任何數值**。
 ⑤ Fu, F., Luximon, Y. **Comfort and fit perception based on 3D anthropometry for ear-related product design.** *Applied Ergonomics*, 2022, 100: 103640. DOI: [10.1016/j.apergo.2021.103640](https://doi.org/10.1016/j.apergo.2021.103640)
 　類型：學術論文。**摘要已透過 Europe PMC API 核實。** 30 名受試者（15 男 15 女），受試者內設計。
 　與來源② 同一作者群。原文結論：耳部對稱性、性別、耳甲長度、耳甲腔寬度與知覺評分相關性不顯著或很弱；使用情境與產品尺寸則顯著影響；動態情境下偏好較大尺寸。
 
-④ Wang, M., Fan, H., Yu, S., Wang, L., Chu, J., Tang, X., Li, W., Zhao, X., Zhang, S., Chen, D. **Analysis of the auricles and auricular shape types for ear-related wearables: A study of mainland Chinese sample aged 15–79.** *Work*, 2022, 73(1): 335–352. DOI: [10.3233/WOR-210799](https://doi.org/10.3233/WOR-210799)
-　類型：學術論文。1,120 名中國大陸受試者，15–79 歲，鑄模（casting）＋3D 掃描，18 項耳廓量測變數，歸納五種耳廓形態類型。
-　**摘要已透過 Europe PMC API 核實；數值表在付費牆後未取得。** 目前僅引用其質性結論（量測值隨年齡連續變化、多數線性變數穩定增加、形態類型與年齡組別強相關），**未引用任何數值**。

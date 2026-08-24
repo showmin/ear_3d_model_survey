@@ -36,7 +36,7 @@
 | 0 | [適用範圍、使用方式、證據分級](00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
 | 1 | [使用場景定義](01-use-scenario.md) | Layer-PM | ✅ 初稿 |
 | 1A | [**睡姿分別分析：正睡／側睡／坐睡**](01a-posture-analysis.md) | Layer-PM | ✅ 初稿 |
-| 2 | [人因與解剖基準](02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=112)；需 P1–P5 的尺寸改用【文獻】 |
+| 2 | [人因與解剖基準](02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=56 人／112 耳)；需 P1–P5 的尺寸改用【文獻】 |
 | 3 | [耳部敏感區與禁置區](03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
 | 4 | [最大可設計區域](04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
 | 5 | [聲學幾何約束](05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
@@ -45,7 +45,7 @@
 | 8 | [CMF（含暗室指示燈亮度上限）](08-cmf.md) | Layer-PM | ✅ 初稿 |
 | 9 | [檢查清單](09-checklist.md) | Layer-PM | ✅ 初稿 |
 
-**全部十章皆有初稿。** Part 2 的耳廓外部包絡已有【實測】數據（n=56 人／112 耳），耳甲類內部尺寸進行中。
+**全部十章皆有初稿。** Part 2 的耳廓外部包絡與耳甲深度已有【實測】數據（**n=56 人／112 耳；左右耳非獨立樣本，統計以人為單位**）；需 P1–P5 具名地標的耳甲尺寸改用【文獻】。
 
 > **[Part 9 檢查清單](09-checklist.md) 是交付物，不是要需求方填寫的問卷。** 它供拿這份指引做設計的人自我檢查。其中只有 A 段（場景前提，3–4 題）需要需求方在開工前拍板；B–H 段都是設計者對自己模型的檢查項。
 
