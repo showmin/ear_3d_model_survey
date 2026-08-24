@@ -154,6 +154,7 @@
 ④ Taobao 選購指南：Soundcore Liberty 3 Pro 耳翼尺寸測量攻略。<https://world.taobao.com/lang/zh-tw/shopping-guide/2009964077014581248.htm>
 　類型：**市場商品統計（消費者選購指南）**。單一產品導向，**無方法學描述、無引用來源**，且該頁自承「沒有絕對的官方對應表」「基於人體工學常識的估算，並非廠商的絕對技術規格」。
 　**本指引僅採用其測試方法與定性觀察，不採用其任何 mm 數值作為解剖依據**（該頁的「耳甲腔垂直高度」是從耳屏內側邊緣到耳甲底部的斜線，非自碗緣平面的垂直深度，與 Part 2.4 的 CD 不可比）。原文由 @showmin-wang 於 2026-08-24 提供。
+
 ⑤ Fu, F., Luximon, Y. **Comfort and fit perception based on 3D anthropometry for ear-related product design.** *Applied Ergonomics*, 2022, 100: 103640. DOI: [10.1016/j.apergo.2021.103640](https://doi.org/10.1016/j.apergo.2021.103640)
 　類型：學術論文。**摘要已透過 Europe PMC API 核實。** n=30（15 男 15 女）。
 
