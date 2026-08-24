@@ -6,6 +6,23 @@
 
 ---
 
+## 2.0.0 ⚠️ 本章資料能回答什麼、不能回答什麼
+
+**能回答：「裝得下嗎」。** 尺寸資料界定幾何可行性——機體會不會塞不進去、會不會超出包絡。
+
+**不能回答：「戴起來舒服嗎」。**
+
+| 條目 | 內容 | 來源等級 |
+|---|---|---|
+| 耳部尺寸與主觀舒適／貼合評分的相關性 | **耳部對稱性、性別、耳甲長度、耳甲腔寬度**與知覺評分的相關性**皆不顯著或很弱** | 【文獻】⑤ |
+| 什麼才顯著影響舒適／貼合 | **使用情境（use condition）與產品尺寸（product size）** | 【文獻】⑤ |
+| 靜態 vs 動態 | **使用者在動態情境下偏好較大的產品尺寸**（靜態則否） | 【文獻】⑤ |
+
+> **推論**：舒適度不能由「量使用者的耳朵」推得，必須由「試戴實際產品」測得。
+> 本章資料的角色是**排除幾何上不可行的方案**，不是**挑出最舒適的方案**。後者見 [Part 7](07-wearing-pressure-comfort.md)。
+
+**統計限制**：來源⑤ 為 30 人（15 男 15 女）。**在此樣本量下「未達顯著」是弱證據，不等於證明無關聯**——可能只是檢定力不足。故上述應讀作「尺寸的預測力沒有強到能在 30 人樣本中顯現」，而非「尺寸完全無關」。
+
 ## 2.0 資料來源
 
 本節數值來自對公開學術資料集 **AudioEar3D** 的實際量測，非文獻引用。
@@ -353,6 +370,10 @@ PCA 第一主軸依定義即為延伸範圍最大之方向，故沿 PC1 的跨�
 ③ Zhu, Z., Ji, X., Gao, Z., Hu, G. **A Morphometric Study of Auricular Concha in the Population of Young Chinese Adults.** *International Journal of Morphology*, 2017, 35(4): 1451–1458.
 　全文：<https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0717-95022017000401451>
 　類型：學術論文（開放存取）。**全文已實際開啟，數值表逐格轉錄。** 註：`www.scielo.cl` 之 PDF 與全文頁受 Cloudflare 阻擋，改用 `scielo.conicyt.cl` 舊網域可取得。
+
+⑤ Fu, F., Luximon, Y. **Comfort and fit perception based on 3D anthropometry for ear-related product design.** *Applied Ergonomics*, 2022, 100: 103640. DOI: [10.1016/j.apergo.2021.103640](https://doi.org/10.1016/j.apergo.2021.103640)
+　類型：學術論文。**摘要已透過 Europe PMC API 核實。** 30 名受試者（15 男 15 女），受試者內設計。
+　與來源② 同一作者群。原文結論：耳部對稱性、性別、耳甲長度、耳甲腔寬度與知覺評分相關性不顯著或很弱；使用情境與產品尺寸則顯著影響；動態情境下偏好較大尺寸。
 
 ④ Wang, M., Fan, H., Yu, S., Wang, L., Chu, J., Tang, X., Li, W., Zhao, X., Zhang, S., Chen, D. **Analysis of the auricles and auricular shape types for ear-related wearables: A study of mainland Chinese sample aged 15–79.** *Work*, 2022, 73(1): 335–352. DOI: [10.3233/WOR-210799](https://doi.org/10.3233/WOR-210799)
 　類型：學術論文。1,120 名中國大陸受試者，15–79 歲，鑄模（casting）＋3D 掃描，18 項耳廓量測變數，歸納五種耳廓形態類型。
