@@ -11,8 +11,8 @@
 | 項目 | 決定 | 日期 |
 |---|---|---|
 | 第一階段交付 | 3D 模型設計指引文件 | 2026-08-20 |
-| 機體尺寸變體 | **機型 S／M／L** —— 同一顆耳朵可配戴的三種機體大小。**不是人耳分檔**，見 [Part 0.4b](00-scope-and-usage.md) | 2026-08-21／24 |
-| 人因分列 | 男 / 女（僅耳部尺寸類；**壓力閾值不分**，見 [Part 3.3](03-sensitive-zones.md)、[Part 2.0.2](02-anthropometric-basis.md)） | 2026-08-21 |
+| 機體尺寸變體 | **機型 S／M／L** —— 同一顆耳朵可配戴的三種機體大小。**不是人耳分檔**，見 [Part 0.4b](cn/00-scope-and-usage.md) | 2026-08-21／24 |
+| 人因分列 | 男 / 女（僅耳部尺寸類；**壓力閾值不分**，見 [Part 3.3](cn/03-sensitive-zones.md)、[Part 2.0.2](cn/02-anthropometric-basis.md)） | 2026-08-21 |
 | 目標市場 | **亞洲** | 2026-08-21 |
 | 可製造性範圍 | **僅需 3D 印表機印得出來**，不考慮量產商品化 | 2026-08-21 |
 | 排除範圍 | 電子件空間配置、量產 DFM（模具相關） | 2026-08-21 |
@@ -33,21 +33,21 @@
 
 | # | 章節 | 負責 | 狀態 |
 |---|---|---|---|
-| 0 | [適用範圍、使用方式、證據分級](00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
-| 1 | [使用場景定義](01-use-scenario.md) | Layer-PM | ✅ 初稿 |
-| 1A | [**睡姿分別分析：正睡／側睡／坐睡**](01a-posture-analysis.md) | Layer-PM | ✅ 初稿 |
-| 2 | [人因與解剖基準](02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=56 人／112 耳)；需 P1–P5 的尺寸改用【文獻】 |
-| 3 | [耳部敏感區與禁置區](03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
-| 4 | [最大可設計區域](04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
-| 5 | [聲學幾何約束](05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
-| 6 | [結構與材料（含 3D 列印性）](06-structure-materials.md) | Pareo-MechEE | ✅ 已驗收 |
-| 7 | [佩戴壓力與舒適](07-wearing-pressure-comfort.md) | Layer-PM | ✅ 初稿 |
-| 8 | [CMF（含暗室指示燈亮度上限）](08-cmf.md) | Layer-PM | ✅ 初稿 |
-| 9 | [檢查清單](09-checklist.md) | Layer-PM | ✅ 初稿 |
+| 0 | [適用範圍、使用方式、證據分級](cn/00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
+| 1 | [使用場景定義](cn/01-use-scenario.md) | Layer-PM | ✅ 初稿 |
+| 1A | [**睡姿分別分析：正睡／側睡／坐睡**](cn/01a-posture-analysis.md) | Layer-PM | ✅ 初稿 |
+| 2 | [人因與解剖基準](cn/02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=56 人／112 耳)；需 P1–P5 的尺寸改用【文獻】 |
+| 3 | [耳部敏感區與禁置區](cn/03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
+| 4 | [最大可設計區域](cn/04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
+| 5 | [聲學幾何約束](cn/05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
+| 6 | [結構與材料（含 3D 列印性）](cn/06-structure-materials.md) | Pareo-MechEE | ✅ 已驗收 |
+| 7 | [佩戴壓力與舒適](cn/07-wearing-pressure-comfort.md) | Layer-PM | ✅ 初稿 |
+| 8 | [CMF（含暗室指示燈亮度上限）](cn/08-cmf.md) | Layer-PM | ✅ 初稿 |
+| 9 | [檢查清單](cn/09-checklist.md) | Layer-PM | ✅ 初稿 |
 
 **全部十章皆有初稿。** Part 2 的耳廓外部包絡與耳甲深度已有【實測】數據（**n=56 人／112 耳；左右耳非獨立樣本，統計以人為單位**）；需 P1–P5 具名地標的耳甲尺寸改用【文獻】。
 
-> **[Part 9 檢查清單](09-checklist.md) 是交付物，不是要需求方填寫的問卷。** 它供拿這份指引做設計的人自我檢查。其中只有 A 段（場景前提，3–4 題）需要需求方在開工前拍板；B–H 段都是設計者對自己模型的檢查項。
+> **[Part 9 檢查清單](cn/09-checklist.md) 是交付物，不是要需求方填寫的問卷。** 它供拿這份指引做設計的人自我檢查。其中只有 A 段（場景前提，3–4 題）需要需求方在開工前拍板；B–H 段都是設計者對自己模型的檢查項。
 
 ## 三條貫穿全文的硬性規範
 
@@ -70,13 +70,13 @@
 
 ## 目前最重要的三個未決事項
 
-1. ⛔ **服務哪個使用情境？** A 臥睡／B 坐睡／兩者。**這一題影響最大**——形態選型的優劣排序在兩情境間會**翻轉**（掛耳式在 A 是最差、在 B 是強候選；頭帶眼罩式相反）。見 [Part 1.0](01-use-scenario.md) 與 [Part 4.2.3](04-max-design-envelope.md)。
-2. **側睡凸出高度上限** — 無公開來源，只能實測。**僅情境 A 適用**；若只做情境 B，此缺口消失。見 [Part 4](04-max-design-envelope.md)。
+1. ⛔ **服務哪個使用情境？** A 臥睡／B 坐睡／兩者。**這一題影響最大**——形態選型的優劣排序在兩情境間會**翻轉**（掛耳式在 A 是最差、在 B 是強候選；頭帶眼罩式相反）。見 [Part 1.0](cn/01-use-scenario.md) 與 [Part 4.2.3](cn/04-max-design-envelope.md)。
+2. **側睡凸出高度上限** — 無公開來源，只能實測。**僅情境 A 適用**；若只做情境 B，此缺口消失。見 [Part 4](cn/04-max-design-envelope.md)。
 3. **機型 S／M／L 三檔的目的** — 功能取捨（驅動器／電池）或產品線區隔？決定機型-L 該不該逼近包絡上限。（「適配不同耳朵」已由定義排除，那是配件尺寸的職責。）
 
 ## 已確認的永久邊界（非待補項）
 
-@showmin-wang 於 2026-08-21 確認無其他可用資料。以下限制**不會被後續資料填補**，各有替代做法，詳見 [Part 2.0.2](02-anthropometric-basis.md)：
+@showmin-wang 於 2026-08-21 確認無其他可用資料。以下限制**不會被後續資料填補**，各有替代做法，詳見 [Part 2.0.2](cn/02-anthropometric-basis.md)：
 
 | 限制 | 替代做法 |
 |---|---|
