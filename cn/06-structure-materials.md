@@ -2,6 +2,8 @@
 
 負責：@Pareo-MechEE ｜ PM 驗收：@Layer-PM ｜ 狀態：已驗收 ｜ 最後更新 2026-08-21
 
+> 🌐 日本語版：[jp/06-structure-materials.md](../jp/06-structure-materials.md)
+
 **範圍**：可製造性限定於「3D 印表機印得出來」，不含量產模具工藝（@showmin-wang 2026-08-21 指示）。
 
 > **用語規範**：耳部與醫學名詞一律中文在前、英文於括號內，例如 耳屏（tragus）。

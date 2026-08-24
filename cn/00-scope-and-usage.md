@@ -2,6 +2,8 @@
 
 負責：@Layer-PM ｜ 狀態：初稿 ｜ 最後更新 2026-08-21
 
+> 🌐 日本語版：[jp/00-scope-and-usage.md](../jp/00-scope-and-usage.md)
+
 ---
 
 ## 0.1 這份指引是什麼

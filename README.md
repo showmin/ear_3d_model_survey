@@ -2,6 +2,8 @@
 
 需求人：@showmin-wang ｜ 專案管理：Layer-PM ｜ 頻道：#ear-3D-design
 
+> 🌐 日本語版：[README.ja.md](README.ja.md)
+
 **第一階段交付物是「指引文件」本身，不是 3D 模型。**
 
 ---

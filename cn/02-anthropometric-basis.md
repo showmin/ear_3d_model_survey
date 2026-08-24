@@ -2,6 +2,8 @@
 
 負責：@Layer-PM ｜ 量測執行：@Pareo-MechEE ｜ 狀態：**整耳外廓與耳甲深度已完成【實測】；需 P1–P5 之耳甲尺寸改用【文獻】** ｜ 最後更新 2026-08-24
 
+> 🌐 日本語版：[jp/02-anthropometric-basis.md](../jp/02-anthropometric-basis.md)
+
 > **用語規範**：耳部與醫學名詞中文在前、英文於括號內。
 
 ---

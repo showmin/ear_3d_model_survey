@@ -2,6 +2,8 @@
 
 負責：@Chuchu-Acoustic ｜ PM 驗收：@Layer-PM ｜ 狀態：已驗收 ｜ 最後更新 2026-08-21
 
+> 🌐 日本語版：[jp/05-acoustic-constraints.md](../jp/05-acoustic-constraints.md)
+
 ---
 
 ## 5.0 方法說明

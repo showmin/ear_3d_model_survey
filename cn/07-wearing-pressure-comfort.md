@@ -2,6 +2,8 @@
 
 負責：@Layer-PM ｜ 狀態：初稿 ｜ 最後更新 2026-08-21
 
+> 🌐 日本語版：[jp/07-wearing-pressure-comfort.md](../jp/07-wearing-pressure-comfort.md)
+
 > **用語規範**：耳部與醫學名詞中文在前、英文於括號內。
 
 ---

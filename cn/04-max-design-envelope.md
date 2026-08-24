@@ -2,6 +2,8 @@
 
 負責：@Layer-PM ｜ 狀態：**方法已定，關鍵數值待實測** ｜ 最後更新 2026-08-21
 
+> 🌐 日本語版：[jp/04-max-design-envelope.md](../jp/04-max-design-envelope.md)
+
 回答 @showmin-wang 的提問：**最大可設計區域可到哪裡。**
 
 > **用語規範**：耳部與醫學名詞一律中文在前、英文於括號內，例如 耳甲腔（cavum conchae）。
