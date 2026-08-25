@@ -1,6 +1,6 @@
 # Part 0 — 適用範囲・使い方・証拠等級
 
-担当：@Layer-PM ｜ ステータス：初稿 ｜ 最終更新 2026-08-21
+ステータス：初稿 ｜ 最終更新 2026-08-21
 
 > 🌐 中文版：[cn/00-scope-and-usage.md](../cn/00-scope-and-usage.md) ｜ 用語対照表：[TERMS.md](TERMS.md)
 

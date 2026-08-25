@@ -1,14 +1,12 @@
 # 睡眠耳機 3D 模型設計指引
 
-需求人：@showmin-wang ｜ 專案管理：Layer-PM ｜ 頻道：#ear-3D-design
-
 > 🌐 日本語版：[README.ja.md](README.ja.md)
 
 **第一階段交付物是「指引文件」本身，不是 3D 模型。**
 
 ---
 
-## 專案前提（已由 @showmin-wang 確認）
+## 專案前提（已由需求方確認）
 
 | 項目 | 決定 | 日期 |
 |---|---|---|
@@ -33,19 +31,19 @@
 
 ## 章節與狀態
 
-| # | 章節 | 負責 | 狀態 |
-|---|---|---|---|
-| 0 | [適用範圍、使用方式、證據分級](cn/00-scope-and-usage.md) | Layer-PM | ✅ 初稿 |
-| 1 | [使用場景定義](cn/01-use-scenario.md) | Layer-PM | ✅ 初稿 |
-| 1A | [**睡姿分別分析：正睡／側睡／坐睡**](cn/01a-posture-analysis.md) | Layer-PM | ✅ 初稿 |
-| 2 | [人因與解剖基準](cn/02-anthropometric-basis.md) | Layer-PM | ✅ 完成。整耳包絡與耳甲深度【實測】(n=56 人／112 耳)；需 P1–P5 的尺寸改用【文獻】 |
-| 3 | [耳部敏感區與禁置區](cn/03-sensitive-zones.md) | Layer-PM | ✅ 初稿 |
-| 4 | [最大可設計區域](cn/04-max-design-envelope.md) | Layer-PM | ✅ 初稿（關鍵數值待實測） |
-| 5 | [聲學幾何約束](cn/05-acoustic-constraints.md) | Chuchu-Acoustic | ✅ 已驗收 |
-| 6 | [結構與材料（含 3D 列印性）](cn/06-structure-materials.md) | Pareo-MechEE | ✅ 已驗收 |
-| 7 | [佩戴壓力與舒適](cn/07-wearing-pressure-comfort.md) | Layer-PM | ✅ 初稿 |
-| 8 | [CMF（含暗室指示燈亮度上限）](cn/08-cmf.md) | Layer-PM | ✅ 初稿 |
-| 9 | [檢查清單](cn/09-checklist.md) | Layer-PM | ✅ 初稿 |
+| # | 章節 | 狀態 |
+|---|---|---|
+| 0 | [適用範圍、使用方式、證據分級](cn/00-scope-and-usage.md) | ✅ 初稿 |
+| 1 | [使用場景定義](cn/01-use-scenario.md) | ✅ 初稿 |
+| 1A | [**睡姿分別分析：正睡／側睡／坐睡**](cn/01a-posture-analysis.md) | ✅ 初稿 |
+| 2 | [人因與解剖基準](cn/02-anthropometric-basis.md) | ✅ 完成。整耳包絡與耳甲深度【實測】(n=56 人／112 耳)；需 P1–P5 的尺寸改用【文獻】 |
+| 3 | [耳部敏感區與禁置區](cn/03-sensitive-zones.md) | ✅ 初稿 |
+| 4 | [最大可設計區域](cn/04-max-design-envelope.md) | ✅ 初稿（關鍵數值待實測） |
+| 5 | [聲學幾何約束](cn/05-acoustic-constraints.md) | ✅ 已驗收 |
+| 6 | [結構與材料（含 3D 列印性）](cn/06-structure-materials.md) | ✅ 已驗收 |
+| 7 | [佩戴壓力與舒適](cn/07-wearing-pressure-comfort.md) | ✅ 初稿 |
+| 8 | [CMF（含暗室指示燈亮度上限）](cn/08-cmf.md) | ✅ 初稿 |
+| 9 | [檢查清單](cn/09-checklist.md) | ✅ 初稿 |
 
 **全部十章皆有初稿。** Part 2 的耳廓外部包絡與耳甲深度已有【實測】數據（**n=56 人／112 耳；左右耳非獨立樣本，統計以人為單位**）；需 P1–P5 具名地標的耳甲尺寸改用【文獻】。
 
@@ -53,7 +51,7 @@
 
 ## 三條貫穿全文的硬性規範
 
-**0. 用語規範。** 耳部部位與醫學名詞一律**中文在前、英文於括號內**，例如 耳屏（tragus）、耳甲腔（cavum conchae）、迷走神經耳支（auricular branch of vagus nerve, ABVN）。首次出現標全稱與縮寫，其後可只用中文。（@showmin-wang 2026-08-21 指示）
+**0. 用語規範。** 耳部部位與醫學名詞一律**中文在前、英文於括號內**，例如 耳屏（tragus）、耳甲腔（cavum conchae）、迷走神經耳支（auricular branch of vagus nerve, ABVN）。首次出現標全稱與縮寫，其後可只用中文。（需求方 2026-08-21 指示）
 
 
 **1. 每一條都必須可判定。** 帶數字門檻。「壁厚應足夠」不收，「壁厚 ≥ X mm」才收。
@@ -78,7 +76,7 @@
 
 ## 已確認的永久邊界（非待補項）
 
-@showmin-wang 於 2026-08-21 確認無其他可用資料。以下限制**不會被後續資料填補**，各有替代做法，詳見 [Part 2.0.2](cn/02-anthropometric-basis.md)：
+需求方於 2026-08-21 確認無其他可用資料。以下限制**不會被後續資料填補**，各有替代做法，詳見 [Part 2.0.2](cn/02-anthropometric-basis.md)：
 
 | 限制 | 替代做法 |
 |---|---|
@@ -93,6 +91,3 @@
 - **佩戴壓力無法模擬驗證**：缺超彈性與接觸求解器，且耳部軟組織材料參數無可核驗來源。最終須實體試戴。
 - **聲學高頻無法模擬**：無波動 FEM/BEM 求解器，僅集中參數模型，有頻率上限。見 Part 5。
 
----
-
-*本 repo 由 Raft agent Layer-PM 維護。commit author 標示為 "Layer-PM (Raft agent)"，email 沿用 repo 擁有者設定。*
