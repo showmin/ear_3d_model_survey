@@ -1,0 +1,41 @@
+{
+  "product_name": "004 Custom Ergonomic Sleep Earphone (Right Ear)",
+  "design_archetype": "AirPods Pro-inspired Flush In-Concha Sleep Shell",
+  "key_design_features": [
+    "Zero-protrusion flush faceplate (X = -0.5mm, 1.0mm below antihelix ridge, zero pillow pressure)",
+    "3-point anatomical lock (Canal entrance + Cavum conchae + Cymba lock wing)",
+    "Micro-BA driver cavity (5.0 x 3.0 x 2.2 mm Knowles/Sonion driver compatible)",
+    "2.2mm acoustic sound bore & 0.8mm pressure-equalization vent",
+    "0.35mm dynamic deformation clearance along perimeter for side-sleeping comfort",
+    "0.6mm soft silicone outer sleeve (Shore A 30) for gentle cartilage contact"
+  ],
+  "dimensions_mm": {
+    "depth_X_total": 13.11,
+    "height_Y_total": 22.73,
+    "width_Z_total": 24.11,
+    "faceplate_plane_X": -0.5,
+    "antihelix_ridge_reference_X": -1.5,
+    "side_sleeping_clearance_mm": 1.0,
+    "canal_nozzle_apex": [
+      12.61,
+      -4.01,
+      -3.04
+    ]
+  },
+  "metrics": {
+    "solid_volume_mm3": 2255.64,
+    "surface_area_mm2": 1484.79,
+    "watertight": true,
+    "facet_count": 20216,
+    "vertex_count": 10108
+  },
+  "components": {
+    "solid_base_stl": "sleep_earphone_solid.stl",
+    "hollow_driver_cavity_stl": "sleep_earphone_hollow.stl",
+    "silicone_sleeve_stl": "sleep_earphone_silicone_sleeve.stl",
+    "colored_ply": "sleep_earphone_colored.ply",
+    "freecad_simulation_project": "sleep_earphone_in_ear_simulation.FCStd",
+    "step_assembly": "sleep_earphone_assembly.step"
+  },
+  "elapsed_seconds": 0.16
+}

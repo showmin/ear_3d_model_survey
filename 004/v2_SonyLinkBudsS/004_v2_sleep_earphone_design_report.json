@@ -1,0 +1,42 @@
+{
+  "product_name": "004 Custom Ergonomic Sleep Earphone v2 (Right Ear)",
+  "design_archetype": "Sony LinkBuds S (WF-LS900N)-inspired Ultra-Compact Pebble Sleep Shell",
+  "key_design_features": [
+    "Ultra-deep recessed flush faceplate (X = 0.0mm, 1.5mm below antihelix ridge, 2.5mm pillow clearance)",
+    "Organic pebble-bean in-concha body (Vol = 2,079 mm^3, 8% smaller than v1)",
+    "3-point anatomical lock (Canal + Cavum + Low-profile Cymba wing)",
+    "Micro-BA driver cavity (5.0 x 3.0 x 2.2 mm Knowles/Sonion driver compatible)",
+    "2.2mm acoustic sound bore & 0.8mm pressure-equalization vent",
+    "0.40mm dynamic deformation clearance along perimeter for side-sleeping comfort",
+    "0.5mm soft silicone outer sleeve (Shore A 30) for gentle cartilage contact"
+  ],
+  "dimensions_mm": {
+    "depth_X_total": 12.61,
+    "height_Y_total": 22.64,
+    "width_Z_total": 24.06,
+    "faceplate_plane_X": 0.0,
+    "antihelix_ridge_reference_X": -1.5,
+    "side_sleeping_clearance_mm": 1.5,
+    "pillow_gap_mm": 2.5,
+    "canal_nozzle_apex": [
+      12.61,
+      -4.01,
+      -3.04
+    ]
+  },
+  "metrics": {
+    "solid_volume_mm3": 2191.75,
+    "surface_area_mm2": 1469.07,
+    "watertight": true,
+    "facet_count": 20216,
+    "vertex_count": 10108
+  },
+  "comparison_v1_vs_v2": {
+    "archetype": "AirPods Pro (v1) vs Sony LinkBuds S (v2)",
+    "volume_mm3": "2,255.6 (v1) vs 2,079.8 (v2, -8% volume)",
+    "faceplate_depth_X": "-0.5mm (v1) vs 0.0mm (v2, deeper by 0.5mm)",
+    "pillow_clearance_mm": "2.0mm (v1) vs 2.5mm (v2, +25% clearance)",
+    "deformation_relief_mm": "0.35mm (v1) vs 0.40mm (v2)"
+  },
+  "elapsed_seconds": 0.15
+}

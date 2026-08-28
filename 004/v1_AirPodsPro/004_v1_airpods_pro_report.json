@@ -1,0 +1,29 @@
+{
+  "product_name": "Apple AirPods Pro (Right Earbud)",
+  "official_specs_apple": {
+    "height_mm": 30.9,
+    "width_mm": 21.8,
+    "depth_mm": 24.0,
+    "weight_grams": 5.3,
+    "acoustic_driver": "Custom high-excursion Apple driver with vent system",
+    "ear_tip": "Silicone ear tip with pressure equalization vent"
+  },
+  "cad_model_dimensions": {
+    "height_Z_mm": 28.14,
+    "width_Y_mm": 26.84,
+    "depth_X_mm": 29.83,
+    "solid_volume_mm3": 1992.99,
+    "is_valid_cad_solid": true,
+    "mesh_facet_count": 12698,
+    "mesh_vertex_count": 6351
+  },
+  "generated_files": {
+    "step_cad_model": "airpods_pro_right.step",
+    "full_stl_model": "airpods_pro_right.stl",
+    "body_shell_stl": "airpods_pro_body.stl",
+    "silicone_tip_stl": "airpods_pro_eartip.stl",
+    "in_ear_freecad_project": "airpods_pro_in_ear.FCStd",
+    "specification_report": "airpods_pro_report.json"
+  },
+  "elapsed_seconds": 0.99
+}
