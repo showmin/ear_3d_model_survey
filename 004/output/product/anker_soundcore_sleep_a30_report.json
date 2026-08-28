@@ -1,0 +1,33 @@
+{
+  "product_name": "Anker Soundcore Sleep A30 (Right Earbud)",
+  "official_specs_anker": {
+    "design_category": "Ultra-Slim Dedicated Sleep Earbuds",
+    "thickness_mm": 8.4,
+    "diameter_mm": 13.2,
+    "weight_grams": 3.1,
+    "patented_features": [
+      "Air-Wing air-cushioned hollow silicone wing (zero-pressure side-sleeping)",
+      "Twin-Seal dual-layer umbrella silicone tips (3x noise blocking with zero canal pressure)",
+      "Ultra-slim round disc body (completely flush in concha bowl)"
+    ]
+  },
+  "cad_model_dimensions": {
+    "depth_X_thickness_mm": 20.22,
+    "height_Y_mm": 25.02,
+    "width_Z_mm": 19.27,
+    "solid_volume_mm3": 1066.42,
+    "is_valid_cad_solid": true,
+    "mesh_facet_count": 33094,
+    "mesh_vertex_count": 16547
+  },
+  "components": {
+    "step_solid": "anker_soundcore_sleep_a30_right.step",
+    "full_stl": "anker_soundcore_sleep_a30_right.stl",
+    "disc_body_stl": "anker_soundcore_sleep_a30_body.stl",
+    "airwing_stl": "anker_soundcore_sleep_a30_airwing.stl",
+    "twinseal_tip_stl": "anker_soundcore_sleep_a30_eartip.stl",
+    "in_ear_freecad_project": "anker_soundcore_sleep_a30_in_ear.FCStd",
+    "report": "anker_soundcore_sleep_a30_report.json"
+  },
+  "elapsed_seconds": 3.19
+}
