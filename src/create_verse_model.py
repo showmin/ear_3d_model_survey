@@ -23,8 +23,8 @@ def create_verse_model(input_path, output_path, padding=5.0, open_face=None, spl
     block_center = centroid.copy()
     
     if open_face:
-        axis_char = open_face[-1].lower()
-        sign = 1 if open_face[0] == '+' else -1
+        axis_char = open_face[0].lower()
+        sign = 1 if open_face[1] == '+' else -1
         axis_idx = {'x': 0, 'y': 1, 'z': 2}[axis_char]
         
         # Shift the block so that it is flush with the impression on this face
@@ -98,8 +98,8 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, required=True, help="Path to input impression STL")
     parser.add_argument("-o", "--output", type=str, required=True, help="Path to output verse STL")
     parser.add_argument("-p", "--padding", type=float, default=5.0, help="Padding thickness around the impression (mm)")
-    parser.add_argument("--open-face", type=str, default=None, choices=['+x', '-x', '+y', '-y', '+z', '-z'], 
-                        help="Make the specified face flush with the impression (e.g., -y) to leave the ear cavity open to the outside.")
+    parser.add_argument("--open-face", type=str, default=None, choices=['x+', 'x-', 'y+', 'y-', 'z+', 'z-'], 
+                        help="Make the specified face flush with the impression (e.g., y-) to leave the ear cavity open to the outside.")
     parser.add_argument("--split", type=str, default=None, choices=['x', 'y', 'z'], 
                         help="Split the resulting mold in half along this axis (outputs two files).")
     
