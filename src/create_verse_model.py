@@ -4,11 +4,12 @@ import trimesh
 import numpy as np
 from manifold3d import Mesh, Manifold
 
-def create_verse_model(input_path, output_path, padding=5.0, open_face=None, split_axis=None):
+def create_verse_model(input_path, output_path, padding=5.0, open_face=None, split_axis=None, cut_depth=0.0):
     """
     Take an ear impression mesh (positive mold) and create a verse body model (negative mold).
     
-    open_face: str, e.g., '+x', '-y', '+z'. Leaves this face open by not padding it.
+    open_face: str, e.g., 'x+', 'y-'. Leaves this face open by not padding it.
+    cut_depth: float. When open_face is used, cuts this many mm deeper into the mesh to guarantee opening.
     split_axis: str, e.g., 'x', 'y', 'z'. Splits the final mold in half along this axis at the centroid.
     """
     print(f"Loading impression model from: {input_path}")
@@ -28,10 +29,13 @@ def create_verse_model(input_path, output_path, padding=5.0, open_face=None, spl
         axis_idx = {'x': 0, 'y': 1, 'z': 2}[axis_char]
         
         # Shift the block so that it is flush with the impression on this face
-        # Reduce the extent on this axis by 'padding'
-        block_extents[axis_idx] -= padding
-        # Shift center towards the opposite direction by padding/2
-        block_center[axis_idx] -= sign * (padding / 2.0)
+        # If cut_depth is provided, we cut deeper into the impression
+        cut = cut_depth if cut_depth else 0.0
+        # Reduce the extent on this axis by 'padding' + 'cut'
+        block_extents[axis_idx] -= (padding + cut)
+        # Shift center towards the opposite direction by (padding + cut)/2
+        block_center[axis_idx] -= sign * ((padding + cut) / 2.0)
+
         
     block = trimesh.creation.box(extents=block_extents)
     block.apply_translation(block_center)
@@ -100,6 +104,8 @@ if __name__ == "__main__":
     parser.add_argument("-p", "--padding", type=float, default=5.0, help="Padding thickness around the impression (mm)")
     parser.add_argument("--open-face", type=str, default=None, choices=['x+', 'x-', 'y+', 'y-', 'z+', 'z-'], 
                         help="Make the specified face flush with the impression (e.g., y-) to leave the ear cavity open to the outside.")
+    parser.add_argument("--cut-depth", type=float, default=0.0, 
+                        help="When using --open-face, cut this many mm deeper into the model to guarantee the opening is exposed.")
     parser.add_argument("--split", type=str, default=None, choices=['x', 'y', 'z'], 
                         help="Split the resulting mold in half along this axis (outputs two files).")
     
@@ -109,4 +115,4 @@ if __name__ == "__main__":
         print(f"Error: Input file {args.input} does not exist.")
         exit(1)
         
-    create_verse_model(args.input, args.output, args.padding, args.open_face, args.split)
+    create_verse_model(args.input, args.output, args.padding, args.open_face, args.split, args.cut_depth)
