@@ -4,71 +4,104 @@ import trimesh
 import numpy as np
 from manifold3d import Mesh, Manifold
 
-def create_verse_model(input_path, output_path, padding=5.0):
+def create_verse_model(input_path, output_path, padding=5.0, open_face=None, split_axis=None):
     """
-    Take an ear impression mesh (positive mold) and create a verse body model (negative mold)
-    by subtracting it from a bounding block using robust boolean operations via manifold3d.
+    Take an ear impression mesh (positive mold) and create a verse body model (negative mold).
+    
+    open_face: str, e.g., '+x', '-y', '+z'. Leaves this face open by not padding it.
+    split_axis: str, e.g., 'x', 'y', 'z'. Splits the final mold in half along this axis at the centroid.
     """
     print(f"Loading impression model from: {input_path}")
     impression = trimesh.load(input_path)
     
-    if not impression.is_watertight:
-        print("Warning: Input mesh is not watertight! Boolean operations might yield unexpected results.")
-    
-    # Calculate bounding box of the impression
     bounds = impression.bounds
     extents = impression.extents
+    centroid = impression.centroid
     
-    print(f"Impression bounds: {bounds}")
-    print(f"Impression extents: {extents}")
-    print(f"Impression volume: {impression.volume if impression.is_watertight else 'N/A'}")
-    
-    # Create a bounding block (flesh) that is larger than the impression
-    # We add padding to all sides.
-    # However, for the "outer" side (usually where the impression was cut, e.g., the base),
-    # we might want it flush. We'll add padding everywhere for a complete mold.
+    # Calculate bounding block
     block_extents = extents + (padding * 2)
-    block_center = impression.centroid
+    block_center = centroid.copy()
     
-    # Create the block in trimesh
+    if open_face:
+        axis_char = open_face[-1].lower()
+        sign = 1 if open_face[0] == '+' else -1
+        axis_idx = {'x': 0, 'y': 1, 'z': 2}[axis_char]
+        
+        # Shift the block so that it is flush with the impression on this face
+        # Reduce the extent on this axis by 'padding'
+        block_extents[axis_idx] -= padding
+        # Shift center towards the opposite direction by padding/2
+        block_center[axis_idx] -= sign * (padding / 2.0)
+        
     block = trimesh.creation.box(extents=block_extents)
     block.apply_translation(block_center)
     
     print("Converting meshes to Manifold objects for robust boolean subtraction...")
-    # Convert impression to Manifold
-    # Note: Manifold expects float32 for vertices and uint32 for faces
-    verts_imp = np.array(impression.vertices, dtype=np.float32)
-    faces_imp = np.array(impression.faces, dtype=np.uint32)
-    m_imp = Manifold(Mesh(vert_properties=verts_imp, tri_verts=faces_imp))
-    
-    # Convert block to Manifold
-    verts_blk = np.array(block.vertices, dtype=np.float32)
-    faces_blk = np.array(block.faces, dtype=np.uint32)
-    m_blk = Manifold(Mesh(vert_properties=verts_blk, tri_verts=faces_blk))
+    m_imp = Manifold(Mesh(vert_properties=np.array(impression.vertices, dtype=np.float32), 
+                          tri_verts=np.array(impression.faces, dtype=np.uint32)))
+    m_blk = Manifold(Mesh(vert_properties=np.array(block.vertices, dtype=np.float32), 
+                          tri_verts=np.array(block.faces, dtype=np.uint32)))
     
     print("Executing Boolean Difference (Block - Impression)...")
     m_verse = m_blk - m_imp
     
-    print("Extracting resulting mesh...")
-    out_mesh_data = m_verse.to_mesh()
+    if split_axis:
+        print(f"Splitting mold along {split_axis}-axis...")
+        axis_idx = {'x': 0, 'y': 1, 'z': 2}[split_axis.lower()]
+        
+        # Create two massive bounding boxes for splitting
+        huge = 500.0
+        
+        # Box for positive half
+        box_pos_extents = np.array([huge, huge, huge])
+        box_pos_center = centroid.copy()
+        box_pos_center[axis_idx] += huge / 2.0
+        m_box_pos = Manifold(Mesh(
+            vert_properties=np.array(trimesh.creation.box(extents=box_pos_extents).apply_translation(box_pos_center).vertices, dtype=np.float32),
+            tri_verts=np.array(trimesh.creation.box(extents=box_pos_extents).faces, dtype=np.uint32)
+        ))
+        
+        # Box for negative half
+        box_neg_extents = np.array([huge, huge, huge])
+        box_neg_center = centroid.copy()
+        box_neg_center[axis_idx] -= huge / 2.0
+        m_box_neg = Manifold(Mesh(
+            vert_properties=np.array(trimesh.creation.box(extents=box_neg_extents).apply_translation(box_neg_center).vertices, dtype=np.float32),
+            tri_verts=np.array(trimesh.creation.box(extents=box_neg_extents).faces, dtype=np.uint32)
+        ))
+        
+        m_part_a = m_verse ^ m_box_pos  # Intersection
+        m_part_b = m_verse ^ m_box_neg
+        
+        out_a = m_part_a.to_mesh()
+        out_b = m_part_b.to_mesh()
+        
+        verse_a = trimesh.Trimesh(vertices=np.array(out_a.vert_properties, dtype=np.float64), faces=np.array(out_a.tri_verts, dtype=np.int32))
+        verse_b = trimesh.Trimesh(vertices=np.array(out_b.vert_properties, dtype=np.float64), faces=np.array(out_b.tri_verts, dtype=np.int32))
+        
+        base, ext = os.path.splitext(output_path)
+        path_a = f"{base}_partA{ext}"
+        path_b = f"{base}_partB{ext}"
+        verse_a.export(path_a)
+        verse_b.export(path_b)
+        print(f"Success! Saved split models to:\n  {path_a}\n  {path_b}")
     
-    # Reconstruct trimesh object
-    verse_verts = np.array(out_mesh_data.vert_properties, dtype=np.float64)
-    verse_faces = np.array(out_mesh_data.tri_verts, dtype=np.int32)
-    
-    verse = trimesh.Trimesh(vertices=verse_verts, faces=verse_faces)
-    
-    print(f"Resulting verse model volume: {verse.volume if verse.is_watertight else 'N/A'}")
-    
-    # Export to output path
-    verse.export(output_path)
-    print(f"Success! Saved verse model to: {output_path}")
+    else:
+        out_mesh_data = m_verse.to_mesh()
+        verse = trimesh.Trimesh(vertices=np.array(out_mesh_data.vert_properties, dtype=np.float64), 
+                                faces=np.array(out_mesh_data.tri_verts, dtype=np.int32))
+        verse.export(output_path)
+        print(f"Success! Saved verse model to: {output_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create a negative (verse) ear model from a positive ear impression.")
     parser.add_argument("-i", "--input", type=str, required=True, help="Path to input impression STL")
     parser.add_argument("-o", "--output", type=str, required=True, help="Path to output verse STL")
     parser.add_argument("-p", "--padding", type=float, default=5.0, help="Padding thickness around the impression (mm)")
+    parser.add_argument("--open-face", type=str, default=None, choices=['+x', '-x', '+y', '-y', '+z', '-z'], 
+                        help="Make the specified face flush with the impression (e.g., -y) to leave the ear cavity open to the outside.")
+    parser.add_argument("--split", type=str, default=None, choices=['x', 'y', 'z'], 
+                        help="Split the resulting mold in half along this axis (outputs two files).")
     
     args = parser.parse_args()
     
@@ -76,4 +109,4 @@ if __name__ == "__main__":
         print(f"Error: Input file {args.input} does not exist.")
         exit(1)
         
-    create_verse_model(args.input, args.output, args.padding)
+    create_verse_model(args.input, args.output, args.padding, args.open_face, args.split)
