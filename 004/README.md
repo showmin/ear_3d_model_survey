@@ -72,7 +72,7 @@ To make each version visually distinct and instantly recognizable while maintain
 │   ├── 004_v1_rigid_chassis_hollow.stl           # Rigid Polymer Housing with Micro-BA Cavity
 │   ├── 004_v1_soft_silicone_sleeve.stl           # Soft Silicone Outer Sleeve (Shore A 30)
 │   ├── 004_v1_sleep_earphone_colored.ply         # 4-Color Anatomically Segmented Inspection Mesh
-│   ├── 004_v1_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & Pillow Simulation
+│   ├── 004_v1_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & Pillow Simulation (with Concave + Convex Ear)
 │   ├── 004_v1_sleep_earphone_design_report.json  # Quantitative Dimensional Report
 │   ├── 004_v1_airpods_pro_reference_1to1.step    # 1:1 Apple AirPods Pro Reference STEP Model
 │   ├── 004_v1_airpods_pro_reference_1to1.stl     # 1:1 Apple AirPods Pro Reference STL Mesh
@@ -86,7 +86,7 @@ To make each version visually distinct and instantly recognizable while maintain
 │   ├── 004_v2_rigid_chassis_hollow.stl           # Rigid Polymer Housing with Micro-BA Cavity
 │   ├── 004_v2_soft_silicone_sleeve.stl           # Soft Pebble Silicone Cushioning Sleeve (Shore A 30)
 │   ├── 004_v2_sleep_earphone_colored.ply         # 4-Color Anatomically Segmented Inspection Mesh
-│   ├── 004_v2_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & 2.5mm Pillow Simulation
+│   ├── 004_v2_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & 2.5mm Pillow Simulation (with Concave + Convex Ear)
 │   ├── 004_v2_sleep_earphone_design_report.json  # Quantitative Dimensional Report
 │   ├── 004_v2_sony_linkbuds_s_reference_1to1.step# 1:1 Sony LinkBuds S Reference STEP Model
 │   ├── 004_v2_sony_linkbuds_s_reference_1to1.stl # 1:1 Sony LinkBuds S Reference STL Mesh
@@ -98,7 +98,7 @@ To make each version visually distinct and instantly recognizable while maintain
 │   ├── 004_v3_rigid_chassis_hollow.stl           # Rigid Polymer Housing with Micro-BA Cavity
 │   ├── 004_v3_soft_silicone_sleeve.stl           # Patented Air-Wing Hollow Air-Cushioned Silicone Sleeve
 │   ├── 004_v3_sleep_earphone_colored.ply         # 4-Color Anatomically Segmented Inspection Mesh
-│   ├── 004_v3_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & 3.0mm Pillow Simulation
+│   ├── 004_v3_sleep_earphone_in_ear_simulation.FCStd # FreeCAD Multi-Body Wearing & 3.0mm Pillow Simulation (with Concave + Convex Ear)
 │   ├── 004_v3_sleep_earphone_design_report.json  # 3-Generation Comparative Verification Report
 │   ├── 004_v3_anker_sleep_a30_reference_1to1.step# 1:1 Anker Soundcore Sleep A30 Reference STEP Model
 │   ├── 004_v3_anker_sleep_a30_reference_1to1.stl # 1:1 Anker Soundcore Sleep A30 Reference STL Mesh
@@ -107,7 +107,8 @@ To make each version visually distinct and instantly recognizable while maintain
 │   └── 004_v3_anker_sleep_a30_in_ear.FCStd       # FreeCAD Project: 1:1 Anker Sleep A30 Wearing Simulation
 │
 └── reference_ear/                                  # Subject 004 Anatomical Benchmark Data
-    ├── 004_human_ear_right_solid.stl              # 100% Watertight 3D Human Ear Solid (Poisson Reconstruction)
+    ├── 004_human_ear_right_raw_concave.stl        # 🌟 Raw 3D Human Ear Scan Surface (Concave Ear Basin & Canal Depression)
+    ├── 004_human_ear_right_solid.stl              # 100% Watertight 3D Human Ear Closed Solid (Convex Poisson Reconstruction)
     ├── 004_concha_basin.stl                       # Segmented Concha Basin (Cavum + Cymba + Acoustic Meatus)
     └── 004_canal_entrance.stl                     # Segmented Ear Canal Entrance Funnel
 ```
@@ -117,9 +118,11 @@ To make each version visually distinct and instantly recognizable while maintain
 ## 🔬 Viewing & Simulation Guide in FreeCAD
 
 1. **Opening Simulation Projects**:
-   - Open `004_v3_sleep_earphone_in_ear_simulation.FCStd` directly in FreeCAD (v0.21 or v1.1+).
-2. **Multi-Material Object Inspection**:
-   - `Rigid_Polymer_Chassis_004_v3`: Represents the internal structural core housing the electronics.
-   - `Soft_Silicone_Sleeve_004_v3_ShoreA30`: Represents the flexible silicone skin with the crescent Air-Wing air cushion.
-   - `Human_Ear_004_Scan`: Human ear anatomy. Set transparency to 70% (`Ctrl + D`) for internal interference inspection.
-   - `Simulated_Pillow_Plane_Gap_3_0mm`: Tangent contact plane at $X = -2.5\text{ mm}$ proving complete zero-contact side-sleeping clearance.
+   - Open `004_vX_sleep_earphone_in_ear_simulation.FCStd` directly in FreeCAD (v0.21 or v1.1+).
+2. **Concave vs. Convex Ear Anatomy Inspection**:
+   - **`Human_Ear_004_Raw_Scan_Concave`**: The original 3D optical scan showing the **concave ear canal cavity and concha bowl**. Select and press **Spacebar** to see the earphone perfectly seated inside the anatomical ear cavity!
+   - **`Human_Ear_004_Solid_Convex`**: The closed watertight outer ear solid (set transparency to 70% with `Ctrl + D`).
+3. **Multi-Material Components**:
+   - **`Rigid_Polymer_Chassis_004_vX`**: The internal hard polymer housing core.
+   - **`Soft_Silicone_Sleeve_004_vX_ShoreA30`**: The flexible silicone skin (and Air-Wing air cushion in v3).
+   - **`Simulated_Pillow_Plane_Gap_Xmm`**: Tangent plane at $X = -2.5\text{ mm}$ verifying zero-contact side-sleeping safety clearance.
