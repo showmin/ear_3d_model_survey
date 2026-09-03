@@ -1,6 +1,6 @@
 # Part 8 — CMF（Color, Material, Finish）
 
-狀態：初稿 ｜ 最後更新 2026-08-21
+狀態：初稿 ｜ 最後更新 2026-08-25
 
 > 🌐 日本語版：[jp/08-cmf.md](../jp/08-cmf.md)
 

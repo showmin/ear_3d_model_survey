@@ -1,6 +1,6 @@
 # Part 7 — 佩戴壓力與舒適
 
-狀態：初稿 ｜ 最後更新 2026-08-21
+狀態：初稿 ｜ 最後更新 2026-08-25
 
 > 🌐 日本語版：[jp/07-wearing-pressure-comfort.md](../jp/07-wearing-pressure-comfort.md)
 
