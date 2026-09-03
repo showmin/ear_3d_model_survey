@@ -58,7 +58,27 @@ def content_date(path):
     return None                          # only ever had metadata commits
 
 
+def preflight():
+    """Refuse to run where the derivation would be silently wrong.
+
+    The exclusion logic walks commit history. On a shallow clone the commits
+    below the boundary simply do not exist as far as git is concerned, so a
+    chapter's date resolves to the earliest VISIBLE commit -- and the script
+    would still exit 0 with a perfectly plausible-looking date. That is the
+    same "fails in a way that looks like success" mode this tool exists to
+    prevent, so it is an error rather than a warning.
+    """
+    if sh("git", "rev-parse", "--is-inside-work-tree").strip() != "true":
+        sys.exit("ERROR: not inside a git work tree; content dates cannot be derived.")
+    if sh("git", "rev-parse", "--is-shallow-repository").strip() == "true":
+        sys.exit("ERROR: shallow clone detected.\n"
+                 "  Commits below the shallow boundary are invisible, so every date\n"
+                 "  would silently resolve to the earliest visible commit.\n"
+                 "  Run `git fetch --unshallow` first, then re-run this script.")
+
+
 def main():
+    preflight()
     changed = errors = 0
     files = sorted(glob.glob("cn/*.md")) + sorted(glob.glob("jp/*.md"))
     for raw in files:
