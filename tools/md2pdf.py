@@ -43,10 +43,25 @@ for ln in lines:
     out.append(ln)
 text = "\n".join(out)
 
+# Insert the blank line markdown needs before a nested list that was written
+# directly under a list item. This replaces the nl2br extension, which turned
+# EVERY newline into a <br> and so broke prose lines wherever the source
+# happened to wrap.
+# python-markdown nests a sub-list only at 4-space indent; these documents use
+# 3. Re-indent to multiples of 4 so sub-items nest under their parent instead
+# of being swallowed into its paragraph. (This is why nl2br was needed before —
+# it papered over the same problem while breaking every prose line.)
+out = []
+for ln in text.split("\n"):
+    m = re.match(r"^( +)([-*+])(\s+)(\S.*)$", ln)
+    if m:
+        level = max(1, round(len(m.group(1)) / 3))
+        ln = "    " * level + m.group(2) + " " + m.group(4)
+    out.append(ln)
+text = "\n".join(out)
+
 import markdown
-# nl2br is needed: without it, sub-items written on the line directly below a
-# numbered item (no blank line) get swallowed into that item's paragraph.
-body = markdown.markdown(text, extensions=["extra", "sane_lists", "nl2br"])
+body = markdown.markdown(text, extensions=["extra", "sane_lists"])
 
 for i, b in enumerate(blocks):
     # mermaid wants <br/> for line breaks; a literal \n inside a quoted label
@@ -58,7 +73,8 @@ for i, b in enumerate(blocks):
 body = body.replace("<p>@@PAGEBREAK@@</p>", '<div class="pagebreak"></div>')
 body = body.replace("@@PAGEBREAK@@", '<div class="pagebreak"></div>')
 
-CJK = '"Microsoft JhengHei", "Microsoft YaHei", "Noto Sans CJK TC", "PingFang TC"'
+CJK = ('"Microsoft JhengHei", "Microsoft YaHei", "Noto Sans CJK TC", '
+       '"PingFang TC", "Segoe UI Emoji"')     # emoji font for the callout marks
 html = f"""<!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8">
 <title>{SRC.stem}</title>
@@ -80,12 +96,32 @@ html = f"""<!doctype html>
   strong {{ color: #0E6A74; }}
   code {{ background: #F2F7F7; padding: .1em .35em; border-radius: 3px;
          font-family: Consolas, monospace; font-size: .92em; }}
+
+  /* Tables: markdown gives no borders of its own, so they must be styled here
+     or they print as bare floating text. */
+  table {{ border-collapse: collapse; width: 100%; margin: .7em 0 1em;
+          font-size: 9.6pt; break-inside: auto; }}
+  thead {{ display: table-header-group; }}      /* repeat header across pages */
+  tr {{ break-inside: avoid; }}
+  th, td {{ border: .8px solid #C3D6D8; padding: .38em .55em;
+           text-align: left; vertical-align: top; line-height: 1.45; }}
+  th {{ background: #0E6A74; color: #fff; font-weight: 700; border-color: #0E6A74; }}
+  /* CJK breaks between any two characters, so a narrow label column splits
+     words like 納入 down the middle. Keep the label column on one line. */
+  th:first-child, td:first-child {{ white-space: nowrap; }}
+  tbody tr:nth-child(even) td {{ background: #F6FAFA; }}
+  td code {{ background: #E9F1F1; }}
+
+  blockquote {{ margin: .7em 0; padding: .5em .8em; background: #F2F7F7;
+               border-radius: 4px; break-inside: avoid; }}
+  blockquote p {{ margin: .25em 0; }}
+  hr {{ border: none; border-top: 1px solid #D6E2E3; margin: 1.1em 0; }}
   pre.mermaid {{ background: none; text-align: center; margin: .6em 0 .8em;
                 break-inside: avoid; }}
   /* A4 content box is 267mm tall; leave room for the heading above so the
      diagram never gets bumped onto a page of its own. */
   pre.mermaid svg {{ max-width: 100% !important; width: auto !important;
-                    max-height: 218mm; height: auto; }}
+                    max-height: 190mm; height: auto; }}
   .pagebreak {{ break-after: page; }}
   /* NB: no CSS `zoom` anywhere. Zoom desyncs mermaid's text measurement from
      its layout, which clips every node label. The source's zoom:0.85 is
